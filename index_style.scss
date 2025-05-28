@@ -47,7 +47,6 @@ body {
         font-size: 24px;
         font-weight: 400;
         line-height: 32px;
-        letter-spacing: 0px;
         text-align: left;
     }
     &__btn {
@@ -145,7 +144,7 @@ body {
     }
 
     &__game{
-    width: 378px;
+    width: 100%;
     display: flex;
     grid-column: span 4;
     flex-direction: column;
@@ -204,3 +203,5 @@ body {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
 }
+
+@import 'mobile';
