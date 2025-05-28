@@ -18,7 +18,7 @@ body {
     background-image: url(img/header_star_xl.png),url(img/header_stars_1.png),url(img/header_stars_2.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position:
-    top -400px right -500px,
+    top -380px right -480px,
     top 69px left 63px,
     bottom 59px right 200px;
     display: grid;
@@ -26,7 +26,7 @@ body {
     gap: 32px;
 
     &__content {
-        grid-column: span 7;
+        grid-column: span 8;
         padding-bottom: 156px;
     }
 
@@ -81,6 +81,7 @@ body {
 }
 
 .stripe {
+    width: 100%;
     position: absolute;
     padding-left: 50px;
     padding-right: 50px;
@@ -140,63 +141,66 @@ body {
         grid-template-columns: repeat(12, 1fr);
         justify-items: center;
         align-items: end;
-        gap: 32px;
+        gap: 0px 32px; 
+    }
 
-        &__game{
-            width: 378px;
-            display: flex;
-            grid-column: span 4;
-            flex-direction: column;
-            border-radius: 30px;
-            background: rgb(255, 255, 255);
-            transition: transform 0.3s, background 0.3s;
+    &__game{
+    width: 378px;
+    display: flex;
+    grid-column: span 4;
+    flex-direction: column;
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+    transition: transform 0.3s, background 0.3s;
 
-            &__desc {
-                padding: 32px;
-                padding-bottom: 36px;
+        &__desc {
+            padding: 32px;
+            padding-bottom: 36px;
 
-                &__number {
-                    display: flex;
-                    justify-content: center;
-                    padding: 8px 16px 10px 16px;
-                    width: 108px;
-                    margin-bottom: 16px;
-                    align-items: center;
-                    border-radius: 52.58px;
-                    background: rgb(247, 247, 247);
-                    color: rgb(32, 32, 39);
-                    font-family: Montserrat;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 110%;
-                    letter-spacing: 0px;
-                    text-align: left;
-                }
+            &__number {
+                display: flex;
+                justify-content: center;
+                padding: 8px 16px 10px 16px;
+                width: 108px;
+                margin-bottom: 16px;
+                align-items: center;
+                border-radius: 52.58px;
+                background: rgb(247, 247, 247);
+                color: rgb(32, 32, 39);
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 110%;
+                letter-spacing: 0px;
+                text-align: left;
+            }
 
-                &__title{
-                    color: rgb(32, 32, 39);
-                    font-family: Montserrat;
-                    font-size: 32px;
-                    font-weight: 700;
-                    line-height: 39px;
-                    letter-spacing: 0px;
-                    text-align: left;
-                }
+            &__title{
+                color: rgb(32, 32, 39);
+                font-family: Montserrat;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+                letter-spacing: 0px;
+                text-align: left;
             }
         }
-        
-        &__game:hover{
-            cursor: pointer;
-            transform: scale(1.1)
-        }
+    }
+    
+    &__game:hover{
+        cursor: pointer;
+        transform: scale(1.1)
+    }
 
-        &__game-line{
-            margin-bottom: 40px;        }
-        
+    &__game-line_top{
+        margin-top: 32px;        
+    }
+    &__game-line_bottom{
+        margin-bottom: 39px;        
     }
 }
 
 .center {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
 }
