@@ -171,10 +171,10 @@ body {
   cursor: pointer;
   transform: scale(1.1);
 }
-.catalog__game-line_top {
+.catalog__game_top-line {
   margin-top: 32px;
 }
-.catalog__game-line_bottom {
+.catalog__game_bottom-line {
   margin-bottom: 39px;
 }
 
