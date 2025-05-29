@@ -48,10 +48,15 @@
         &__p{
             font-size: 16px;
         }
+
+        & svg {
+            min-width: 19px;
+            min-height: 19px;
+        }
     }
 
     .catalog {
-        padding-top: calc(48px + 51px);
+        padding-top: 48px;
 
         &__title{
             font-size: 40px;
@@ -79,10 +84,10 @@
         transform: scale(1.05);
         }
 
-        &__game-line_top{
+        &__game_top-line{
         margin-top: 0;        
         }
-        &__game-line_bottom{
+        &__game_bottom-line{
             margin-bottom: 0;        
         }
     }
