@@ -99,7 +99,7 @@ body {
   background-image: url(img/catalog_star_xl.png), url(img/catalog_stars.png);
   background-repeat: no-repeat, no-repeat;
   background-position: top 180px right -80px, top 60% left 63px;
-  padding-top: 184px;
+  padding-top: 94px;
   padding-bottom: 96px;
 }
 .catalog__title {
