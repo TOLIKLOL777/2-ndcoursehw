@@ -80,7 +80,6 @@ body {
 }
 
 .stripe {
-    position: relative;
     padding-left: 50px;
     padding-right: 50px;
     height: 90px;
@@ -92,7 +91,6 @@ body {
     overflow-x: hidden;
 
     &__p {
-        position: relative;
         color: rgb(32, 32, 39);
         font-family: Montserrat;
         font-size: 30px;
