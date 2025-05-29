@@ -12,7 +12,6 @@ body {
 }
 
 .header {
-    position: relative;
     padding-top: 196px;
     background-color: #E1FF8F;
     background-image: url(img/header_star_xl.png),url(img/header_stars_1.png),url(img/header_stars_2.png);
@@ -81,8 +80,7 @@ body {
 }
 
 .stripe {
-    width: 100%;
-    position: absolute;
+    position: relative;
     padding-left: 50px;
     padding-right: 50px;
     height: 90px;
@@ -91,8 +89,10 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 50px;
+    overflow-x: hidden;
 
     &__p {
+        position: relative;
         color: rgb(32, 32, 39);
         font-family: Montserrat;
         font-size: 30px;
@@ -101,6 +101,10 @@ body {
         letter-spacing: 4%;
         text-align: left;
         white-space: nowrap;
+    }
+
+    & svg {
+        min-width: 36px;
     }
 }
 
@@ -145,7 +149,7 @@ body {
     }
 
     &__game{
-    width: 378px;
+    width: 100%;
     display: flex;
     grid-column: span 4;
     flex-direction: column;
@@ -153,38 +157,39 @@ body {
     background: rgb(255, 255, 255);
     transition: transform 0.3s, background 0.3s;
 
-        &__desc {
+        &-desc {
             padding: 32px;
             padding-bottom: 36px;
-
-            &__number {
-                display: flex;
-                justify-content: center;
-                padding: 8px 16px 10px 16px;
-                width: 108px;
-                margin-bottom: 16px;
-                align-items: center;
-                border-radius: 52.58px;
-                background: rgb(247, 247, 247);
-                color: rgb(32, 32, 39);
-                font-family: Montserrat;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 110%;
-                letter-spacing: 0px;
-                text-align: left;
-            }
-
-            &__title{
-                color: rgb(32, 32, 39);
-                font-family: Montserrat;
-                font-size: 32px;
-                font-weight: 700;
-                line-height: 39px;
-                letter-spacing: 0px;
-                text-align: left;
-            }
         }
+        
+        &-number {
+            display: flex;
+            justify-content: center;
+            padding: 8px 16px 10px 16px;
+            width: 108px;
+            margin-bottom: 16px;
+            align-items: center;
+            border-radius: 52.58px;
+            background: rgb(247, 247, 247);
+            color: rgb(32, 32, 39);
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+
+        &-title{
+            color: rgb(32, 32, 39);
+            font-family: Montserrat;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 39px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+        
     }
     
     &__game:hover{
