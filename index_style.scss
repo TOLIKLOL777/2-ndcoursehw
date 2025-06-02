@@ -1,4 +1,4 @@
-$text-color: gb(32, 32, 39);
+$text-color: rgb(32, 32, 39);
 $text-font: Montserrat;
 
 * {
@@ -41,8 +41,8 @@ body {
 
     &__desc {
         padding-bottom: 48px;
-        color: rgb(32, 32, 39);
-        font-family: Montserrat;
+        color: $text-color;
+        font-family: $text-font;
         font-size: 24px;
         font-weight: 400;
         line-height: 32px;
@@ -53,7 +53,7 @@ body {
         width: 247px;
         height: 66px;
         color: rgb(255, 255, 255);
-        font-family: Montserrat;
+        font-family: $text-font;
         font-size: 24px;
         font-weight: 600;
         line-height: 141.69%;
@@ -69,12 +69,16 @@ body {
         border-radius: 60px;
         background: rgb(32, 32, 39);
         transition: 0.3s;
+
+        &_mobile {
+            display: none;
+        }
     }
 
     &__btn:hover {
         cursor: pointer;
         background: rgb(255, 255, 255);
-        color: rgb(32, 32, 39);
+        color: $text-color;
     }
 }
 
@@ -90,8 +94,8 @@ body {
     overflow-x: hidden;
 
     &__p {
-        color: rgb(32, 32, 39);
-        font-family: Montserrat;
+        color: $text-color;
+        font-family: $text-font;
         font-size: 30px;
         font-weight: 700;
         line-height: 110%;
@@ -117,7 +121,7 @@ body {
 
     &__title {
         color: rgb(255, 255, 255);
-        font-family: Montserrat;
+        font-family: $text-font;
         font-size: 64px;
         font-weight: 700;
         line-height: 78px;
@@ -129,7 +133,7 @@ body {
     &__desc {
         padding-bottom: 72px;
         color: rgb(255, 255, 255);
-        font-family: Montserrat;
+        font-family: $text-font;
         font-size: 24px;
         font-weight: 400;
         line-height: 32px;
@@ -168,8 +172,8 @@ body {
             align-items: center;
             border-radius: 52.58px;
             background: rgb(247, 247, 247);
-            color: rgb(32, 32, 39);
-            font-family: Montserrat;
+            color: $text-color;
+            font-family: $text-font;
             font-size: 16px;
             font-weight: 500;
             line-height: 110%;
@@ -178,8 +182,8 @@ body {
         }
 
         &-title{
-            color: rgb(32, 32, 39);
-            font-family: Montserrat;
+            color: $text-color;
+            font-family: $text-font;
             font-size: 32px;
             font-weight: 700;
             line-height: 39px;
@@ -200,6 +204,119 @@ body {
     &__game_bottom-line{
         margin-bottom: 39px;        
     }
+}
+
+.games {
+    background: rgb(32, 32, 39);
+    background-image: url(img/games_stars_1.png),url(img/games_stars_2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+    top 93px right 45px,
+    bottom 45px right 52px;
+    padding-bottom: 144px;
+
+    &__title{
+        color: rgb(255, 255, 255);
+        font-family: $text-font;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-bottom: 72px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__game {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-color: rgb(247, 247, 247);
+        display: flex;
+        justify-content: space-between;
+
+        &-content {
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-title {
+            color: $text-color;
+            font-family: $text-font;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 59px;
+            letter-spacing: 0px;
+            text-align: left;
+            padding-bottom: 24px;
+        }
+
+        &-desc {
+            color: $text-color;
+            font-family: $text-font;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0px;
+            text-align: left;
+            padding-bottom: 36px;
+        }
+
+        &-btn {
+            width: 247px;
+            height: 66px;
+            border-radius: 60px;
+            background: rgb(32, 32, 39);
+            border: 1px solid rgb(32, 32, 39);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10;
+            padding: 16px 28px 16px 28px;
+            color: rgb(255, 255, 255);
+            font-family: $text-font;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 141.69%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: transform 0.3s, background 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                background: rgb(255, 255, 255);
+                color: $text-color;
+            }
+        }
+
+        &_flip {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.footer {
+    height: 150px;
+    width: 100%;
+    background: rgb(189, 237, 53);
+    color: rgb(0, 0, 0);
+    font-family: $text-font;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: center;
+    align-content: center;
 }
 
 .center {

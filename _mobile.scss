@@ -35,7 +35,11 @@
             width: 285px;
             height: 55px;
             font-size: 16px;
+            display: none;
 
+            &_mobile {
+                display: flex;
+            }
         }
     }
 
@@ -56,40 +60,54 @@
     }
 
     .catalog {
-        padding-top: 48px;
+        display: none;
+    }
 
-        &__title{
+    .games {
+        padding-top: 48px;
+        background-image: none;
+        padding-bottom: 10px;
+
+        &__title {
+            padding-bottom: 48px;
             font-size: 40px;
             line-height: 49px;
-            padding-bottom: 48px;
         }
 
-        &__desc {
-            display: none;
+        &__box {
+            gap: 24px;
         }
 
-        &__games {
-            grid-template-columns: repeat(4, 1fr);
-            justify-items: center;
-            align-items: end;
-            gap: 24px 16px; 
-        }
+        &__game {
+            height: 100%;
+            flex-direction: column-reverse;
 
-        &__game{
-            width: 100%;
-        }
+            &-content {
+                padding: 29px 29px 32px 29px;
+            }
 
-        &__game:hover{
-        cursor: pointer;
-        transform: scale(1.05);
-        }
+            &-title {
+                font-size: 32px;
+                line-height: 39px;
+            }
 
-        &__game_top-line{
-        margin-top: 0;        
+            &-desc {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &-btn {
+                height: 55px;
+                width: 285px;
+                font-size: 16px;
+            }
         }
-        &__game_bottom-line{
-            margin-bottom: 0;        
-        }
+    }
+
+    .footer {
+        height: 100px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     .center {
