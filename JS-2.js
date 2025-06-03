@@ -48,25 +48,25 @@ let monthNumber = 12;
 switch (monthNumber) {
     case 1:
     case 2:
-    case 3:
+    case 12:
         alert('Это месяц Зимы');
         break;
 
+    case 3:
     case 4:
     case 5:
-    case 6:
         alert('Это месяц Весны');
         break;
 
+    case 6:
     case 7:
     case 8:
-    case 9:
         alert('Это месяц Лета');
         break;
 
+    case 9:
     case 10:
     case 11:
-    case 12:
         alert('Это месяц Осени');
         break;
 
