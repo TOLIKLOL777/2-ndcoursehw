@@ -288,7 +288,7 @@ body {
   padding-right: calc(50% - 600px);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .header {
     padding-top: 147px;
     grid-template-columns: repeat(4, 1fr);
