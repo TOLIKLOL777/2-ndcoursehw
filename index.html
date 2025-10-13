@@ -110,7 +110,7 @@
                 <div class="games__game-content">
                     <p class="games__game-title">Угадай число</p>
                     <p class="games__game-desc">Попробуй угадать случайное число от 1 до 100.</p>
-                    <p><a href="" class="games__game-btn">Играть!</a></p>
+                    <p><a class="games__game-btn" onclick="guess_number()">Играть!</a></p>
                 </div>
                 <img src="img/guess_number2.png" alt="guess_number">
             </article>
@@ -157,5 +157,21 @@
         </section>
     </div>
     <footer class="footer">Все права защищены.</footer>
+    <script>
+        function guess_number() {
+            let answer = Math.floor(Math.random() * (100 - 1 + 1)) + 1
+            let user_num = prompt("Напишите любое число")
+            while (true) {
+                if (user_num < answer) {
+                    user_num = prompt("Ваше число меньше ответа")
+                } else if (user_num > answer) {
+                    user_num = prompt("Ваше число больше ответа")
+                } else if (user_num == answer) {
+                    alert("Поздравляю вы выйграли!")
+                    break
+                }
+            }
+        }
+    </script>
 </body>
 </html>
