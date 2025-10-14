@@ -288,6 +288,11 @@ body {
   padding-right: calc(50% - 600px);
 }
 
+@media (max-width: 768px) {
+  .games__game-img {
+    width: 45%;
+  }
+}
 @media (max-width: 425px) {
   .header {
     padding-top: 147px;
@@ -371,6 +376,9 @@ body {
     height: 55px;
     width: 285px;
     font-size: 16px;
+  }
+  .games__game-img {
+    width: 100%;
   }
   .footer {
     height: 100px;
