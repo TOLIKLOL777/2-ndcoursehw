@@ -158,8 +158,6 @@
     </div>
     <footer class="footer">Все права защищены.</footer>
     <script>
-        
-        const words = ["яблоко", "параллелепипед", "пчела", "сложность", "текст", "дорого", "огород", "радуга", "кошка", "помидор", "сыр", "программисты", "родина", "миг"]
         const quiz = [
            {
                question: "Какого цвета небо?",
@@ -247,26 +245,25 @@
         }
 
         function turn_text() {
-            let word_index = random_num(0,words.length)
-            let random_word = words[word_index]
-            let user_word = prompt(`Попробуй перевернуть этот текст: ${random_word.split('').reverse().join('')}`)
-            if (user_word.toLowerCase() == random_word) {
-                alert("Молодец! Ответ правильный")
-            } else {
-                alert(`Неправильно. Правильный ответ: ${random_word}`)
-            }
+            let user_word = prompt(`Напиши любой текст и я его переверну`)
+            alert(`Твой перевёрнутый текст ${user_word.split('').reverse().join('')}`)
         }
 
         function quiz_game() {
-            let question_index = random_num(0,quiz.length)
-            let user_answer = prompt(`${quiz[question_index].question}
-${quiz[question_index].options}`)
-            if (user_answer == quiz[question_index].correctAnswer) {
-                alert("Молодец! Ответ правильный")
-            } else {
-                alert(`Неправильно. Правильный ответ: ${quiz[question_index].correctAnswer}`)
-            }
-
+            let question_num = 1;
+            let correct_count = 0;
+            alert(`Тебе нужно будет ответить на несколько вопросов`);
+            quiz.forEach(question_index => {
+                let user_answer = prompt(`${question_num} вопрос: ${question_index.question}
+Варианты ответа ${question_index.options} (Введите порядковый номер ответа)`);
+                if (user_answer == question_index.correctAnswer) {
+                    alert("Правильно");
+                    correct_count++;
+                } else {
+                    alert("Неправильно");
+                }
+            });
+            alert(`Квиз окончен. Ваш результат ${correct_count} из ${quiz.length}`)
         }
     </script>
 </body>
