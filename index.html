@@ -134,7 +134,7 @@
                 <div class="games__game-content"><a name="game__rock_paper_scissor_yakor"></a>
                     <p class="games__game-title">Камень,</br> ножницы,</br> бумага </p>
                     <p class="games__game-desc">Сыграй в популярную игру против компьютера.</p>
-                    <p><a class="games__game-btn">Играть!</a></p>
+                    <p><a class="games__game-btn" onclick="rock_paper_scissor()">Играть!</a></p>
                 </div>
                 <img class="games__game-img" src="img/rock_paper_scissor2.png" alt="rock_paper_scissor">
             </article>
@@ -264,6 +264,30 @@
                 }
             });
             alert(`Квиз окончен. Ваш результат ${correct_count} из ${quiz.length}`)
+        }
+
+        function rock_paper_scissor() {
+            const vars = ["камень", "ножницы", "бумага"]
+            let user_var = prompt("Выбирай! Камень, ножницы или бумага?")
+            let computer_var = vars[random_num(1,3) - 1]
+            
+            if (user_var.toLowerCase() == computer_var) {
+                alert(`У меня ${computer_var}. Ничья`)
+            } else if ((user_var.toLowerCase() == "камень") && (computer_var == "ножницы")) {
+                alert(`У меня ${computer_var}. Ты выйграл`)
+            } else if ((user_var.toLowerCase() == "камень") && (computer_var == "бумага")) {
+                alert(`У меня ${computer_var}. Ты проиграл`)
+            } else if ((user_var.toLowerCase() == "бумага") && (computer_var == "ножницы")) {
+                alert(`У меня ${computer_var}. Ты проиграл`)
+            } else if ((user_var.toLowerCase() == "бумага") && (computer_var == "камень")) {
+                alert(`У меня ${computer_var}. Ты выйграл`)
+            } else if ((user_var.toLowerCase() == "ножницы") && (computer_var == "камень")) {
+                alert(`У меня ${computer_var}. Ты проиграл`)
+            } else if ((user_var.toLowerCase() == "ножницы") && (computer_var == "бумага")) {
+                alert(`У меня ${computer_var}. Ты выйграл`)
+            } else {
+                alert('Напиши камень, ножницы или бумага')
+            }
         }
     </script>
 </body>
