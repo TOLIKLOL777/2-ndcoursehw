@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .task-2__text {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="task-1">
+        <h1 id="title">Hello, World!</h1>
+        <button id="hide-text">Hide text</button>
+    </div>
+    <div class="task-2">
+        <h1 class="task-2__text" id="title2">Hello, JavaScript!</h1>
+        <button id="change-color">Change color</button>
+    </div>
+    <div class="task-3">
+        <h1 id="title3">Hello, World!</h1>
+        <button id="change-text">Change text</button>
+    </div>
+    <div class="task-4">
+        <p class="description">Текст с классом</p>
+        <p>Текст без класса</p>
+        <p class="description">Текст с классом</p>
+        <p>Текст без класса</p>
+        <button id="change-desc">Изменить текст с классом</button>
+    </div>
+    <div class="task-5">
+        <p class="description2">Текст с классом</p>
+        <p>Текст без класса</p>
+        <p class="description2">Текст с классом</p>
+        <p>Текст без класса</p>
+        <button id="change-desc2">Изменить текст с классом</button>
+    </div>
+    <div class="task-6">
+        <button id="add-element">Create text</button>
+    </div>
+    <div class="task-7">
+        <p class="description3">Текст 1</p>
+        <p class="description3">Текст 2</p>
+        <p class="description3">Текст 3</p>
+        <p class="description3">Текст 4</p>
+        <button id="del-element">Удалить элемент</button>
+    </div>
+    <script>
+        const title_hide = document.getElementById('title')
+        const hideTextBtn = document.querySelector('#hide-text')
+
+        hideTextBtn.addEventListener('click', function () {
+            if (title_hide.style.display != 'none') {
+                title_hide.style.display = 'none'
+            } else {
+                title_hide.style.display = 'block'
+            }
+        })
+
+        const colored_title = document.querySelector('.task-2__text')
+        const changeColorBtn = document.querySelector('#change-color')
+
+        changeColorBtn.addEventListener('click', function () {
+            colored_title.style.color = 'blue'
+        })
+
+        const changing_title = document.querySelector('#title3')
+        const changeTextBtn = document.querySelector('#change-text')
+
+        changeTextBtn.addEventListener('click', function () {
+            changing_title.textContent = 'Привет, мир!'
+        })
+        
+        const descriptions = document.querySelectorAll('.description')
+        const changeDescBtn = document.querySelector('#change-desc')
+
+        changeDescBtn.addEventListener('click', function () {
+            descriptions.forEach(element => {
+                element.textContent = 'Измененный текст'
+            });
+        })
+                
+        const descriptions2 = document.querySelectorAll('.description2')
+        const changeDescBtn2 = document.querySelector('#change-desc2')
+
+        changeDescBtn2.addEventListener('click', function () {
+            descriptions2.forEach(element => {
+                element.textContent = 'Новый текст'
+            });
+        })
+
+        const createTextBtn = document.querySelector('#add-element')
+
+        createTextBtn.addEventListener('click', function () {
+            const new_element = document.createElement('p')
+            new_element.textContent = 'Новый абзац'
+            document.body.appendChild(new_element);
+        })
+
+        const descriptions3 = document.querySelectorAll('.description3')
+        const deleteElementBtn = document.querySelector('#del-element')
+
+        deleteElementBtn.addEventListener('click', function () {
+            descriptions3[0].remove()
+        })
+    </script>
+</body>
+</html>
