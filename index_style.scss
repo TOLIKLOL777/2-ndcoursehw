@@ -83,16 +83,19 @@ body {
 }
 
 .stripe {
-    padding-left: 50px;
-    padding-right: 50px;
-    height: 90px;
     background: rgb(188, 236, 48);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
     overflow-x: hidden;
 
+    &-track {
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 90px;
+        background: rgb(188, 236, 48);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
     &__p {
         color: $text-color;
         font-family: $text-font;
@@ -118,6 +121,7 @@ body {
     top 60% left 63px;
     padding-top: 94px;
     padding-bottom: 96px;
+    transition: all 0.5s;
 
     &__title {
         color: rgb(255, 255, 255);
@@ -214,6 +218,7 @@ body {
     top 93px right 45px,
     bottom 45px right 52px;
     padding-bottom: 144px;
+    transition: all 0.5s;
 
     &__title{
         color: rgb(255, 255, 255);
