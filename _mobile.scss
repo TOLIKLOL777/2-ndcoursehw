@@ -1,4 +1,4 @@
-@media (max-width: 425px){
+@media (max-width: 767px){
 
     .header{
         padding-top: 147px;
@@ -99,7 +99,7 @@
 
             &-btn {
                 height: 55px;
-                width: 285px;
+                min-width: 100%;
                 font-size: 16px;
             }
 

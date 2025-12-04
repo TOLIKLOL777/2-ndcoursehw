@@ -149,7 +149,6 @@ body {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         justify-items: center;
-        align-items: end;
         gap: 0px 32px; 
     }
 
@@ -239,7 +238,7 @@ body {
 
     &__game {
         width: 100%;
-        height: 100%;
+        height: 500px;
         border-radius: 30px;
         background-color: rgb(247, 247, 247);
         display: flex;
@@ -306,6 +305,10 @@ body {
 
         &_flip {
             flex-direction: row-reverse;
+        }
+
+        &-img {
+            min-width: 50%;
         }
     }
 }
